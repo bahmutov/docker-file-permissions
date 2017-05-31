@@ -7,7 +7,7 @@
     "test": "node .",
     "build": "docker build -t gleb/docker-file-permissions .",
     "prerun": "docker rm perms || true",
-    "run": "docker run --name perms -p 6500:6500 -it gleb/docker-file-permissions /bin/bash"
+    "run": "docker run --name perms -it gleb/docker-file-permissions /bin/bash"
   },
   "repository": {
     "type": "git",

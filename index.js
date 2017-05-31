@@ -14,4 +14,12 @@ fs.chmodSync(name, '111')
 console.log('changed folder permissions')
 
 console.log(execa.shellSync(`ls -ld "${name}"`).stdout)
-console.log(execa.shellSync(`ls "${name}"`).stdout)
+
+try {
+  console.log(execa.shellSync(`ls "${name}"`).stdout)
+  console.error('😡 could list directory without permissions')
+  process.exit(-1)
+} catch (err) {
+  console.log('✅ caught permissions exception!')
+  console.log(err.message)
+}

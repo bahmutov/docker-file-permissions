@@ -18,7 +18,7 @@ docker build -t gleb/docker-file-permissions .
 run
 
 ```
-docker run --name perms -p 6500:6500 -it gleb/docker-file-permissions /bin/bash
+docker run --name perms -it gleb/docker-file-permissions /bin/bash
 ```
 
 stop
